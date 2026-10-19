@@ -176,3 +176,7 @@ ehthumbs_vista.db
 
 *~
 .fuse_hidden*
+
+# Nested repositories in the local workspace, not part of this website
+/ptyv/
+/vy/
