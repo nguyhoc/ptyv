@@ -1,0 +1,646 @@
+/* =====================================================
+   ANIMATIONS.CSS
+   Birthday Website Animation System
+===================================================== */
+
+/* =====================================================
+   KEYFRAMES
+===================================================== */
+
+/* Fade In */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fade Up */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade Down */
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade Left */
+
+@keyframes fadeLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade Right */
+
+@keyframes fadeRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Zoom In */
+
+@keyframes zoomIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Zoom Out */
+
+@keyframes zoomOut {
+
+    from {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Floating */
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Heart Floating */
+
+@keyframes heartFloat {
+
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-15px) scale(1.08);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Pulse */
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Glow */
+
+@keyframes glow {
+
+    0% {
+        box-shadow:
+            0 0 10px rgba(255,143,177,.3);
+    }
+
+    50% {
+        box-shadow:
+            0 0 40px rgba(255,143,177,.8);
+    }
+
+    100% {
+        box-shadow:
+            0 0 10px rgba(255,143,177,.3);
+    }
+}
+
+/* Text Reveal */
+
+@keyframes textReveal {
+
+    from {
+        opacity: 0;
+        letter-spacing: 12px;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        letter-spacing: normal;
+        transform: translateY(0);
+    }
+}
+
+/* Gradient Flow */
+
+@keyframes gradientFlow {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Loader Spin */
+
+@keyframes loaderSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mouse Scroll */
+
+@keyframes scrollMouse {
+
+    0% {
+        opacity: 1;
+        transform: translateY(8px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+}
+
+/* Shine Effect */
+
+@keyframes shine {
+
+    0% {
+        left: -120%;
+    }
+
+    100% {
+        left: 120%;
+    }
+}
+
+/* =====================================================
+   REVEAL SYSTEM
+===================================================== */
+
+.reveal {
+
+    opacity: 0;
+    transform: translateY(50px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.active {
+
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+
+    opacity: 0;
+    transform: translateX(-60px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal-left.active {
+
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+
+    opacity: 0;
+    transform: translateX(60px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal-right.active {
+
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-zoom {
+
+    opacity: 0;
+    transform: scale(.8);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal-zoom.active {
+
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* =====================================================
+   HERO ANIMATIONS
+===================================================== */
+
+.hero-title {
+
+    animation:
+        textReveal 1.5s ease forwards;
+}
+
+.hero-subtitle {
+
+    animation:
+        fadeUp 1.5s ease forwards;
+}
+
+.hero-tag {
+
+    animation:
+        fadeDown 1.2s ease forwards;
+}
+
+.scroll-indicator {
+
+    animation:
+        floating 2s ease-in-out infinite;
+}
+
+/* =====================================================
+   LOADER
+===================================================== */
+
+.loader-heart {
+
+    animation:
+        heartFloat 1.5s ease-in-out infinite;
+}
+
+.loader-text {
+
+    animation:
+        pulse 2s ease infinite;
+}
+
+/* =====================================================
+   BUTTON EFFECTS
+===================================================== */
+
+.primary-button {
+
+    position: relative;
+    overflow: hidden;
+}
+
+.primary-button::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 50%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.4),
+            transparent
+        );
+
+    transform: skewX(-25deg);
+}
+
+.primary-button:hover::before {
+
+    animation:
+        shine .8s ease;
+}
+
+.primary-button:hover {
+
+    animation:
+        glow 2s infinite;
+}
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+.countdown-box {
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.countdown-box:hover {
+
+    transform:
+        translateY(-8px)
+        scale(1.04);
+
+    animation:
+        glow 2s infinite;
+}
+
+/* =====================================================
+   GLASS CARD
+===================================================== */
+
+.glass-card {
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.glass-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        var(--shadow-glow-strong);
+}
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery-item {
+
+    transition:
+        transform .5s ease,
+        box-shadow .5s ease;
+}
+
+.gallery-item:hover {
+
+    transform:
+        rotate(-2deg)
+        translateY(-10px)
+        scale(1.02);
+
+    box-shadow:
+        var(--shadow-glow-strong);
+}
+
+.gallery-image {
+
+    transition:
+        transform .7s ease;
+}
+
+.gallery-item:hover .gallery-image {
+
+    transform: scale(1.08);
+}
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+.video-wrapper {
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.video-wrapper:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        var(--shadow-glow-strong);
+}
+
+/* =====================================================
+   HEART ICON
+===================================================== */
+
+.heart-icon {
+
+    animation:
+        heartFloat 2s ease-in-out infinite;
+}
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+.music-button {
+
+    animation:
+        pulse 3s ease infinite;
+}
+
+.music-button.playing {
+
+    animation:
+        glow 2s infinite;
+}
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+#back-to-top:hover {
+
+    animation:
+        pulse 1s infinite;
+}
+
+/* =====================================================
+   SCROLL INDICATOR INNER DOT
+===================================================== */
+
+.scroll-indicator span::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 8px;
+    left: 50%;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    transform: translateX(-50%);
+
+    animation:
+        scrollMouse 1.5s infinite;
+}
+
+/* =====================================================
+   FLOATING UTILITIES
+===================================================== */
+
+.float {
+
+    animation:
+        floating 3s ease-in-out infinite;
+}
+
+.pulse {
+
+    animation:
+        pulse 2s infinite;
+}
+
+.glow {
+
+    animation:
+        glow 2s infinite;
+}
+
+.fade-in {
+
+    animation:
+        fadeIn 1s forwards;
+}
+
+.fade-up {
+
+    animation:
+        fadeUp 1s forwards;
+}
+
+.fade-left {
+
+    animation:
+        fadeLeft 1s forwards;
+}
+
+.fade-right {
+
+    animation:
+        fadeRight 1s forwards;
+}
+
+.zoom-in {
+
+    animation:
+        zoomIn 1s forwards;
+}
+
+/* =====================================================
+   GRADIENT TEXT
+===================================================== */
+
+.gradient-text {
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff8fb1,
+            #ffd6e2,
+            #ff8fb1
+        );
+
+    background-size:
+        300% 300%;
+
+    animation:
+        gradientFlow 6s linear infinite;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,138 @@
+{
+    "site": {
+        "title": "Happy Birthday",
+        "description": "A special birthday website filled with love and memories.",
+        "author": "Nguyen Ba Hoc",
+        "copyright": "© 2026 All Rights Reserved"
+    },
+
+    "hero": {
+        "tag": "✨ A Special Day ✨",
+        "title": "Happy Birthday",
+        "subtitle": "Wishing You Happiness, Love And Endless Smiles",
+        "buttonText": "Read Message",
+        "targetDate": "2026-11-01T00:00:00+07:00"
+    },
+
+    "letter": {
+        "sectionTitle": "Thông điệp gửi cho Vy",
+        "sectionDescription": "Some words from my heart.",
+        "content": [
+            "Thân ái ! hôm nay một ngày đặc biệt , ngày mà một cô gái đáng yêu xinh đẹp ra đời",
+            "Hoc muốn chúc Vy rất nhiều điều , chúc Vy sức khỏe , chúc Vy vui vẻ , chúc Vy may mắn , .. ",
+            "mà cứ liệt kê như này cũng chán hầy. Thôi tâm sự tí hihi , đôi lúc có nhiều chuyện không mấy vui vẻ ",
+            "có một số chuyện có thể làm mình buồn , làm mình khó chịu ,... nhưng hãy luôn vui vẻ lạc quan ",
+            "bởi vì lúc mình cười thì mọi thứ xung quanh cũng sẽ vui vẻ theo. Hãy luôn giữ nụ cười trên môi nhé !!!",
+            "đặc biệt lúc Vy cười xinh lắm luôn , thoii chúc Vy một ngày sinh nhật thật vui vẻ"
+        ]
+    },
+
+    "gallery": [
+        {
+            "id": 1,
+            "image": "/public/images/gallery/a1.jpg",
+            "title": "Memory One",
+            "description": "A beautiful moment worth remembering."
+        },
+        {
+            "id": 2,
+            "image": "/public/images/gallery/a2.jpg",
+            "title": "Memory Two",
+            "description": "Another unforgettable memory."
+        },
+        {
+            "id": 3,
+            "image": "/public/images/gallery/a3.jpg",
+            "title": "Memory Three",
+            "description": "A special day captured forever."
+        },
+        {
+            "id": 4,
+            "image": "/public/images/gallery/a4.jpg",
+            "title": "Memory Four",
+            "description": "Smiles that never fade away."
+        },
+        {
+            "id": 5,
+            "image": "/public/images/gallery/a5.jpg",
+            "title": "Memory Five",
+            "description": "A story behind every picture."
+        },
+        {
+            "id": 6,
+            "image": "/public/images/gallery/a6.jpg",
+            "title": "Memory Six",
+            "description": "One more beautiful memory."
+        }
+    ],
+
+    "video": {
+        "sectionTitle": "Video Memories",
+        "sectionDescription": "Moments worth remembering forever.",
+        "videoPath": "/public/videos/vy.mp4",
+        "poster": "/public/images/backgrounds/a10.jpg",
+        "caption": "A collection of unforgettable moments."
+    },
+
+    "finalMessage": {
+        "title": "Chúc cho tất cả những ước mơ của em đều trở thành hiện thực",
+        "message": "Cảm ơn Vy vì đã là một phần tuyệt vời của thế giới này. Chúc em luôn tràn đầy niềm vui, thành công, sức khỏe và hạnh phúc.",
+        "buttonText": "Best Wishes"
+    },
+
+    "footer": {
+        "title": "Happy Birthday ❤",
+        "description": "Made with love and beautiful memories.",
+        "copyright": "© 2026 All Rights Reserved"
+    },
+
+    "music": {
+        "enabled": true,
+        "autoplay": false,
+        "loop": true,
+        "volume": 0.5,
+        "file": "/public/music/bd1.mp3"
+    },
+
+    "particles": {
+        "enabled": true,
+        "count": 80,
+        "speed": 0.5,
+        "size": {
+            "min": 1,
+            "max": 4
+        },
+        "opacity": {
+            "min": 0.2,
+            "max": 0.8
+        }
+    },
+
+    "animations": {
+        "loaderDuration": 2500,
+        "scrollRevealOffset": 120,
+        "scrollRevealDelay": 100,
+        "smoothScroll": true,
+        "parallax": true,
+        "hoverGlow": true
+    },
+
+    "socialLinks": {
+        "facebook": "",
+        "instagram": "",
+        "youtube": "",
+        "tiktok": "",
+        "github": ""
+    },
+
+    "seo": {
+        "keywords": [
+            "birthday",
+            "happy birthday",
+            "birthday website",
+            "birthday memories",
+            "birthday gift",
+            "birthday surprise"
+        ]
+    }
+}

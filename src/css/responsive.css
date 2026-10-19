@@ -1,0 +1,439 @@
+/* =====================================================
+   RESPONSIVE.CSS
+   Mobile First Responsive System
+===================================================== */
+
+/* =====================================================
+   EXTRA SMALL DEVICES
+   < 576px
+===================================================== */
+
+@media (max-width: 575.98px) {
+
+    /* =========================
+       GLOBAL
+    ========================= */
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* =========================
+       TYPOGRAPHY
+    ========================= */
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-description {
+        font-size: 0.95rem;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+
+    .hero-tag {
+        font-size: 0.9rem;
+    }
+
+    /* =========================
+       COUNTDOWN
+    ========================= */
+
+    .countdown-container {
+        gap: 12px;
+    }
+
+    .countdown-box {
+        width: 80px;
+        padding: 16px 10px;
+    }
+
+    .countdown-box span {
+        font-size: 1.4rem;
+    }
+
+    .countdown-box small {
+        font-size: 0.7rem;
+    }
+
+    /* =========================
+       LETTER
+    ========================= */
+
+    .letter-card {
+        padding: 25px;
+    }
+
+    .letter-card p {
+        font-size: 1rem;
+    }
+
+    /* =========================
+       GALLERY
+    ========================= */
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-image {
+        height: 260px;
+    }
+
+    /* =========================
+       VIDEO
+    ========================= */
+
+    .video-wrapper {
+        border-radius: 18px;
+    }
+
+    /* =========================
+       FINAL MESSAGE
+    ========================= */
+
+    .heart-icon {
+        font-size: 3rem;
+    }
+
+    .final-title {
+        font-size: 2rem;
+    }
+
+    .final-text {
+        font-size: 1rem;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .primary-button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* =========================
+       FLOATING BUTTONS
+    ========================= */
+
+    .music-button {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    #back-to-top {
+        width: 50px;
+        height: 50px;
+        left: 15px;
+        bottom: 15px;
+    }
+}
+
+/* =====================================================
+   SMALL DEVICES
+   ≥ 576px
+===================================================== */
+
+@media (min-width: 576px) {
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .countdown-box {
+        width: 95px;
+    }
+}
+
+/* =====================================================
+   TABLET
+   ≥ 768px
+===================================================== */
+
+@media (min-width: 768px) {
+
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+    }
+
+    .letter-card {
+        padding: 40px;
+    }
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(280px, 1fr));
+    }
+
+    .gallery-image {
+        height: 320px;
+    }
+
+    .countdown-box {
+        width: 110px;
+    }
+}
+
+/* =====================================================
+   MOBILE LANDSCAPE
+===================================================== */
+
+@media (orientation: landscape) and (max-width: 900px) {
+
+    body {
+        min-height: 100vh;
+    }
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .gallery-image {
+        height: 220px;
+    }
+
+    .video-wrapper {
+        border-radius: 16px;
+    }
+}
+
+/* =====================================================
+   LAPTOP
+   ≥ 992px
+===================================================== */
+
+@media (min-width: 992px) {
+
+    .hero-title {
+        font-size: 5.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .gallery-image {
+        height: 350px;
+    }
+
+    .letter-card {
+        padding: 50px;
+    }
+
+    .countdown-container {
+        gap: 20px;
+    }
+}
+
+/* =====================================================
+   DESKTOP
+   ≥ 1200px
+===================================================== */
+
+@media (min-width: 1200px) {
+
+    .hero-title {
+        font-size: 6rem;
+    }
+
+    .section {
+        padding: 100px 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(3, minmax(300px, 1fr));
+    }
+
+    .final-title {
+        font-size: 4.5rem;
+    }
+}
+
+/* =====================================================
+   LARGE DESKTOP
+   ≥ 1400px
+===================================================== */
+
+@media (min-width: 1400px) {
+
+    .container {
+        max-width: 1320px;
+    }
+
+    .hero-title {
+        font-size: 6.5rem;
+    }
+
+    .section-title {
+        font-size: 3.5rem;
+    }
+
+    .gallery-grid {
+        gap: 40px;
+    }
+
+    .gallery-image {
+        height: 400px;
+    }
+}
+
+/* =====================================================
+   ULTRA WIDE
+   ≥ 1800px
+===================================================== */
+
+@media (min-width: 1800px) {
+
+    .container {
+        max-width: 1500px;
+    }
+
+    .hero-title {
+        font-size: 7rem;
+    }
+
+    .section-title {
+        font-size: 4rem;
+    }
+}
+
+/* =====================================================
+   LANDSCAPE PHONES
+===================================================== */
+
+@media (max-height: 600px) and (orientation: landscape) {
+
+    #hero {
+        min-height: 120vh;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .countdown-container {
+        margin-bottom: 30px;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* =====================================================
+   REDUCED MOTION ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-zoom {
+
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* =====================================================
+   HIGH DPI DISPLAYS
+===================================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+
+    .gallery-image,
+    #memory-video {
+
+        image-rendering: auto;
+    }
+}
+
+/* =====================================================
+   PRINT MODE
+===================================================== */
+
+@media print {
+
+    #loader,
+    #particles-canvas,
+    .music-button,
+    #back-to-top,
+    .scroll-indicator,
+    #scroll-progress {
+
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .glass-card {
+        border: 1px solid #ddd;
+        box-shadow: none;
+    }
+}

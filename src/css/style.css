@@ -1,0 +1,550 @@
+/* =====================================================
+   STYLE.CSS
+   Main Layout & Components
+===================================================== */
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    background: var(--background-gradient);
+    color: var(--text-primary);
+    line-height: var(--line-normal);
+}
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+.section {
+    position: relative;
+    padding: var(--space-3xl) 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    margin-bottom: 16px;
+}
+
+.section-description {
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* =====================================================
+   PARTICLE CANVAS
+===================================================== */
+
+#particles-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* =====================================================
+   LOADER
+===================================================== */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-loader);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--bg-main);
+
+    transition: opacity 0.8s ease,
+                visibility 0.8s ease;
+}
+
+#loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-container {
+    text-align: center;
+}
+
+.loader-heart {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.loader-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+.music-button {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+
+    color: white;
+
+    z-index: var(--z-floating);
+
+    box-shadow: var(--shadow-glow);
+
+    transition: var(--transition-normal);
+}
+
+.music-button:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+.music-icon {
+    font-size: 1.3rem;
+}
+
+/* =====================================================
+   SCROLL PROGRESS
+===================================================== */
+
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 1px;
+
+    width: 0%;
+    height: 4px;
+
+    z-index: 9999;
+
+    background: var(--hero-gradient);
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 180px;
+
+    padding: 16px 28px;
+
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    color: white;
+
+    font-weight: 600;
+
+    border-radius: var(--radius-round);
+
+    background: var(--hero-gradient);
+
+    box-shadow: var(--shadow-glow);
+
+    transition: var(--transition-normal);
+}
+
+.primary-button:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow-strong);
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+#hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.08),
+            transparent 60%
+        );
+
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-tag {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 999px;
+
+    background: var(--glass-bg);
+
+    backdrop-filter: var(--glass-blur);
+
+    margin-bottom: 30px;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    max-width: 800px;
+
+    margin: 0 auto 50px;
+
+    color: var(--text-secondary);
+
+    font-weight: 400;
+}
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 50px;
+}
+
+.countdown-box {
+    width: 120px;
+
+    padding: 25px 15px;
+
+    border-radius: var(--radius-lg);
+
+    background: var(--glass-bg);
+
+    backdrop-filter: var(--glass-blur);
+
+    border: 1px solid var(--glass-border);
+
+    box-shadow: var(--shadow-md);
+}
+
+.countdown-box span {
+    display: block;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.countdown-box small {
+    color: var(--text-secondary);
+}
+
+/* =====================================================
+   SCROLL INDICATOR
+===================================================== */
+
+.scroll-indicator {
+    position: absolute;
+
+    bottom: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.scroll-indicator span {
+    display: block;
+
+    width: 30px;
+    height: 50px;
+
+    border: 2px solid rgba(255,255,255,.6);
+
+    border-radius: 999px;
+}
+
+/* =====================================================
+   GLASS CARD
+===================================================== */
+
+.glass-card {
+    background: var(--glass-bg);
+
+    backdrop-filter: var(--glass-blur);
+
+    border: 1px solid var(--glass-border);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-lg);
+}
+
+.letter-card {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 50px;
+}
+
+.letter-card p {
+    color: var(--text-secondary);
+
+    font-size: 1.1rem;
+
+    text-align: center;
+}
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+}
+
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-lg);
+
+    background: var(--glass-bg);
+
+    border: 1px solid var(--glass-border);
+
+    transition: var(--transition-normal);
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 350px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.gallery-content {
+    padding: 20px;
+}
+
+/* =====================================================
+   VIDEO SECTION
+===================================================== */
+
+.video-wrapper {
+    max-width: 1000px;
+
+    margin: auto;
+
+    border-radius: var(--radius-xl);
+
+    overflow: hidden;
+
+    border: 1px solid var(--glass-border);
+
+    box-shadow: var(--shadow-lg);
+}
+
+#memory-video {
+    width: 100%;
+    display: block;
+}
+
+/* =====================================================
+   FINAL MESSAGE
+===================================================== */
+
+.final-content {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.heart-icon {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.final-title {
+    font-family: var(--font-heading);
+
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+
+    margin-bottom: 25px;
+}
+
+.final-text {
+    max-width: 700px;
+
+    margin: auto auto 40px;
+
+    color: var(--text-secondary);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+#footer {
+    padding: 60px 0;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content h3 {
+    margin-bottom: 12px;
+}
+
+.footer-content p {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.footer-content small {
+    color: var(--text-muted);
+}
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+#back-to-top {
+    position: fixed;
+
+    left: 25px;
+    bottom: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    color: white;
+
+    background: var(--hero-gradient);
+
+    box-shadow: var(--shadow-glow);
+
+    z-index: var(--z-floating);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: var(--transition-normal);
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    transform: translateY(-4px);
+}
+
+/* =====================================================
+   REVEAL INITIAL STATE
+===================================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+}

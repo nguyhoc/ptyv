@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday</title>
+
+    <meta name="description" content="Birthday Website">
+    <meta name="keywords" content="Birthday, Happy Birthday, Memories">
+    <meta name="author" content="Nguyen Ba Hoc">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/css/theme.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/animations.css">
+    <link rel="stylesheet" href="/src/css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- LOADER -->
+    <!-- ========================= -->
+
+    <div id="loader">
+
+        <div class="loader-container">
+
+            <div class="loader-heart">
+                ❤
+            </div>
+
+            <h2 class="loader-text">
+                Loading Memories...
+            </h2>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- PARTICLES BACKGROUND -->
+    <!-- ========================= -->
+
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ========================= -->
+    <!-- MUSIC CONTROL -->
+    <!-- ========================= -->
+
+    <button id="music-toggle" class="music-button">
+
+        <span class="music-icon">♫</span>
+
+    </button>
+
+    <!-- ========================= -->
+    <!-- SCROLL PROGRESS -->
+    <!-- ========================= -->
+
+    <div id="scroll-progress"></div>
+
+    <!-- ========================= -->
+    <!-- HERO SECTION -->
+    <!-- ========================= -->
+
+    <header id="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <span class="hero-tag reveal">
+                    ✨ A Special Day ✨
+                </span>
+
+                <h1 class="hero-title reveal">
+                    Happy Birthday to Bich Ngoc
+                </h1>
+
+                <h2 class="hero-subtitle reveal">
+                    Chúc em luôn vui vẻ và có nụ cười thật tươi
+                </h2>
+
+                <!-- Countdown -->
+
+                <div class="countdown-container reveal">
+
+                    <div class="countdown-box">
+
+                        <span id="days">00</span>
+
+                        <small>Days</small>
+
+                    </div>
+
+                    <div class="countdown-box">
+
+                        <span id="hours">00</span>
+
+                        <small>Hours</small>
+
+                    </div>
+
+                    <div class="countdown-box">
+
+                        <span id="minutes">00</span>
+
+                        <small>Minutes</small>
+
+                    </div>
+
+                    <div class="countdown-box">
+
+                        <span id="seconds">00</span>
+
+                        <small>Seconds</small>
+
+                    </div>
+
+                </div>
+
+                <a href="#birthday-letter" class="primary-button reveal">
+
+                    Read Message
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="scroll-indicator">
+
+            <span></span>
+
+        </div>
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- BIRTHDAY LETTER -->
+    <!-- ========================= -->
+
+    <section id="birthday-letter" class="section">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <h2 class="section-title reveal">
+
+                    Thư gửi cho bạn
+
+                </h2>
+
+                <p class="section-description reveal">
+
+                    Some words from my heart.
+
+                </p>
+
+            </div>
+
+            <div class="glass-card letter-card reveal">
+
+                <p id="letter-content">
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Vitae expedita, tempore voluptas officiis architecto
+                    blanditiis deleniti explicabo porro suscipit ducimus.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- MEMORY GALLERY -->
+    <!-- ========================= -->
+
+    <section id="gallery" class="section">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <h2 class="section-title reveal">
+
+                    Beautiful Memories
+
+                </h2>
+
+                <p class="section-description reveal">
+
+                    Every picture tells a story.
+
+                </p>
+
+            </div>
+
+            <div id="gallery-grid" class="gallery-grid">
+
+                <!-- JS Render -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- VIDEO SECTION -->
+    <!-- ========================= -->
+
+    <section id="video-memories" class="section">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <h2 class="section-title reveal">
+
+                    Video Memories
+
+                </h2>
+
+                <p class="section-description reveal">
+
+                    Moments worth remembering forever.
+
+                </p>
+
+            </div>
+
+            <div class="video-wrapper reveal">
+
+                <video
+                    id="memory-video"
+                    controls
+                    preload="metadata">
+
+                    <source
+                        src="/public/videos/memories.mp4"
+                        type="video/mp4">
+
+                </video>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- FINAL MESSAGE -->
+    <!-- ========================= -->
+
+    <section id="final-message" class="section">
+
+        <div class="container">
+
+            <div class="final-content">
+
+                <div class="heart-icon reveal">
+
+                    ❤
+
+                </div>
+
+                <h2 class="final-title reveal">
+
+                    May All Your Dreams Come True
+
+                </h2>
+
+                <p class="final-text reveal">
+
+                    Thank you for being a wonderful part of this world.
+                    Wishing you joy, success, health and endless happiness.
+
+                </p>
+
+                <button class="primary-button reveal">
+
+                    Best Wishes
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer id="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <h3>
+
+                    Happy Birthday ❤
+
+                </h3>
+
+                <p>
+
+                    Made with love and beautiful memories.
+
+                </p>
+
+                <small>
+
+                    © 2026 All Rights Reserved
+
+                </small>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- ========================= -->
+    <!-- BACK TO TOP -->
+    <!-- ========================= -->
+
+    <button id="back-to-top">
+
+        ↑
+
+    </button>
+
+    <!-- ========================= -->
+    <!-- AUDIO -->
+    <!-- ========================= -->
+
+    <audio
+        id="background-music"
+        loop>
+
+        <source
+            src="/public/music/birthday.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+    <!-- ========================= -->
+    <!-- JS -->
+    <!-- ========================= -->
+
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/countdown.js"></script>
+    <script src="/src/js/particles.js"></script>
+    <script src="/src/js/gallery.js"></script>
+    <script src="/src/js/animations.js"></script>
+    <script src="/src/js/scroll.js"></script>
+    <script src="/src/js/music.js"></script>
+</body>
+
+</html>
