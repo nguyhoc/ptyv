@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: birthday-memory-website-v2
+    name: tulip-letter-garden
     runtime: node
     plan: free
     buildCommand: npm ci

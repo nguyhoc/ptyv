@@ -337,10 +337,16 @@ for (let i = 0; i < 5; i++) {
   scene.add(l); floaters.push(l);
 }
 
-// Kéo để xoay, nhấn bó hoa để mở trang birthday
+// Kéo để xoay, nhấn bó hoa để mở hộp thư
 let dragging = false, dragged = false, lastX = 0, startX = 0, startY = 0, spin = 0;
 const raycaster = new THREE.Raycaster();
 const pointer = new THREE.Vector2();
+const letterDialog = document.getElementById("letter-dialog");
+document.getElementById("letter-message").textContent =
+  "Gửi người mình thương,\n\nCảm ơn em vì đã làm mỗi ngày trở nên đặc biệt. Mong bó hoa nhỏ này mang đến cho em thật nhiều niềm vui và yêu thương.\n\n Happy women day! 💗";
+
+document.getElementById("letter-close").addEventListener("click", () => letterDialog.close());
+
 renderer.domElement.addEventListener("click", (event) => {
   if (dragged) return;
 
@@ -348,9 +354,12 @@ renderer.domElement.addEventListener("click", (event) => {
   pointer.x = ((event.clientX - bounds.left) / bounds.width) * 2 - 1;
   pointer.y = -((event.clientY - bounds.top) / bounds.height) * 2 + 1;
   raycaster.setFromCamera(pointer, camera);
-  if (raycaster.intersectObject(bouquet, true).length) location.assign("/birthday");
+  if (raycaster.intersectObject(bouquet, true).length) {
+    letterDialog.showModal();
+  }
 });
 addEventListener("pointerdown", (e) => {
+  if (e.target !== renderer.domElement) return;
   dragging = true;
   dragged = false;
   lastX = startX = e.clientX;

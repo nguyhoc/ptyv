@@ -1,7 +1,7 @@
 {
-    "name": "birthday-memory-website-v2",
+    "name": "tulip-letter-garden",
     "version": "1.0.0",
-    "description": "Modern Birthday Memory Website with Countdown, Gallery, Music, Particles and Animations",
+    "description": "Interactive tulip bouquet, floating cats, background music, and a personal letter",
     "main": "server.js",
     "author": "Nguyen Ba Hoc",
     "license": "MIT",

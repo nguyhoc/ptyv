@@ -38,7 +38,7 @@ const sendHomepage = (req, res) => {
 app.get('/', sendHomepage);
 
 app.get('/birthday', (req, res) => {
-  res.sendFile(path.join(ROOT_DIR, 'views', 'index.html'));
+  sendHomepage(req, res);
 });
 
 app.use((req, res) => {
@@ -51,7 +51,7 @@ app.use((req, res) => {
 
 if (require.main === module) {
   app.listen(PORT, () => {
-    console.log('Birthday Memory Website v2 running on port ' + PORT);
+    console.log('Tulip Letter Garden running at http://localhost:' + PORT);
   });
 }
 
