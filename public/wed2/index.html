@@ -10,18 +10,11 @@
   <div id="dots"></div>
   <div id="scene"></div>
   <div id="cats"></div>
+  <div class="page-transition" aria-hidden="true"></div>
   <button class="music" id="music" type="button" aria-pressed="false">
     <span class="music-icon" aria-hidden="true">🔇</span>
     <span>Music</span>
   </button>
-  <dialog class="letter-dialog" id="letter-dialog" aria-labelledby="letter-title">
-    <section class="mailbox">
-      <button class="letter-close" id="letter-close" type="button" aria-label="Đóng hộp thư">×</button>
-      <div class="mailbox-icon" aria-hidden="true">💌</div>
-      <h1 id="letter-title">Một lời nhắn dành cho bạn</h1>
-      <p class="letter-message" id="letter-message"></p>
-    </section>
-  </dialog>
   <script type="importmap">
     { "imports": { "three": "/vendor/three/three.module.js" } }
   </script>

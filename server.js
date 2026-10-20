@@ -35,11 +35,12 @@ const sendHomepage = (req, res) => {
   res.sendFile(path.join(ROOT_DIR, 'public', 'wed2', 'index.html'));
 };
 
-app.get('/', sendHomepage);
+const sendBirthdayPage = (req, res) => {
+  res.sendFile(path.join(ROOT_DIR, 'views', 'index.html'));
+};
 
-app.get('/birthday', (req, res) => {
-  sendHomepage(req, res);
-});
+app.get('/', sendHomepage);
+app.get('/birthday', sendBirthdayPage);
 
 app.use((req, res) => {
   res.status(404).json({

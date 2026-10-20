@@ -337,25 +337,24 @@ for (let i = 0; i < 5; i++) {
   scene.add(l); floaters.push(l);
 }
 
-// Kéo để xoay, nhấn bó hoa để mở hộp thư
+// Kéo để xoay, nhấn bó hoa để mở trang chúc mừng sinh nhật
 let dragging = false, dragged = false, lastX = 0, startX = 0, startY = 0, spin = 0;
 const raycaster = new THREE.Raycaster();
 const pointer = new THREE.Vector2();
-const letterDialog = document.getElementById("letter-dialog");
-document.getElementById("letter-message").textContent =
-  "Gửi người mình thương,\n\nCảm ơn em vì đã làm mỗi ngày trở nên đặc biệt. Mong bó hoa nhỏ này mang đến cho em thật nhiều niềm vui và yêu thương.\n\n Happy women day! 💗";
-
-document.getElementById("letter-close").addEventListener("click", () => letterDialog.close());
+let isNavigating = false;
 
 renderer.domElement.addEventListener("click", (event) => {
-  if (dragged) return;
+  if (dragged || isNavigating) return;
 
   const bounds = renderer.domElement.getBoundingClientRect();
   pointer.x = ((event.clientX - bounds.left) / bounds.width) * 2 - 1;
   pointer.y = -((event.clientY - bounds.top) / bounds.height) * 2 + 1;
   raycaster.setFromCamera(pointer, camera);
   if (raycaster.intersectObject(bouquet, true).length) {
-    letterDialog.showModal();
+    isNavigating = true;
+    document.body.classList.add("is-transitioning");
+    const delay = matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 620;
+    setTimeout(() => location.assign("/birthday"), delay);
   }
 });
 addEventListener("pointerdown", (e) => {

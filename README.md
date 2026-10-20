@@ -16,7 +16,9 @@ npm start
 ```
 
 Open <http://localhost:3000>. The `/birthday` path is an alias for the same
-homepage. The `/api/health` endpoint can be used to confirm the server is up.
+site's birthday greeting page. On the homepage, click the tulip bouquet to open
+the greeting with a soft page transition. The `/api/health` endpoint can be used
+to confirm the server is up.
 
 To restart automatically after server-side changes, run `npm run dev`.
 

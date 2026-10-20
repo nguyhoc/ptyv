@@ -109,7 +109,7 @@
     },
 
     "animations": {
-        "loaderDuration": 2500,
+        "loaderDuration": 700,
         "scrollRevealOffset": 120,
         "scrollRevealDelay": 100,
         "smoothScroll": true,
