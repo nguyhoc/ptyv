@@ -9,6 +9,7 @@ app.use('/public', express.static(path.join(ROOT_DIR, 'public')));
 app.use('/src', express.static(path.join(ROOT_DIR, 'src')));
 app.use('/vendor/three', express.static(path.join(ROOT_DIR, 'node_modules', 'three', 'build')));
 app.use('/wed1', express.static(path.join(ROOT_DIR, 'public', 'wed1')));
+app.use('/wed2', express.static(path.join(ROOT_DIR, 'public', 'wed2')));
 
 app.get('/favicon.ico', (req, res) => {
   res.status(204).end();
@@ -30,12 +31,14 @@ app.get('/api/content', (req, res) => {
   res.sendFile(path.join(ROOT_DIR, 'src', 'data', 'content.json'));
 });
 
+const sendHomepage = (req, res) => {
+  res.sendFile(path.join(ROOT_DIR, 'public', 'wed2', 'index.html'));
+};
+
+app.get('/', sendHomepage);
+
 app.get('/birthday', (req, res) => {
   res.sendFile(path.join(ROOT_DIR, 'views', 'index.html'));
-});
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(ROOT_DIR, 'public', 'wed1', 'index.html'));
 });
 
 app.use((req, res) => {

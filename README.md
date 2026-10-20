@@ -9,8 +9,8 @@ npm ci
 npm start
 ```
 
-Open http://localhost:3000. The main page is `/`, the other birthday page is
-`/birthday`, and `/api/health` is the health-check endpoint.
+Open http://localhost:3000. Both `/` and `/birthday` use the `wed2` page, and
+`/api/health` is the health-check endpoint.
 
 ## Deploy to Render
 
