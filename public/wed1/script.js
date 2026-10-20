@@ -37,7 +37,7 @@ spots.forEach(([x, y, n], i) => {
 });
 
 // ---------- Nhạc (tiếng chuông nhẹ) ----------
-const MUSIC_URL = "https://lovecodes2.vercel.app/lovex/n/a.mp3"; // Dán link trực tiếp tới file .mp3, .ogg hoặc .wav vào đây.
+const MUSIC_URL = "/public/music/bd2.mp3"; // Dán link trực tiếp tới file .mp3, .ogg hoặc .wav vào đây.
 const musicButton = document.getElementById("music");
 const musicIcon = musicButton.querySelector(".music-icon");
 let audio, audioTrack, playing = false, timer;
