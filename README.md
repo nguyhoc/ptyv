@@ -1,9 +1,9 @@
 # Tulip Letter Garden
 
-A standalone Vietnamese mini-site featuring an interactive 3D tulip bouquet,
-floating cat stickers, background music, and an editable personal letter. The
-homepage is served from `public/wed2/`; this project has its own name, page, and
-experience rather than reusing the older birthday-memory page.
+A Vietnamese birthday website featuring an interactive 3D tulip bouquet,
+floating cat stickers, background music, and a personal birthday page. The
+homepage uses `public/wed3/`; the previous homepage remains available at
+`/wed2`, while `/birthday` continues to serve the birthday greeting page.
 
 ## Run locally
 
@@ -15,18 +15,18 @@ npm ci
 npm start
 ```
 
-Open <http://localhost:3000>. The `/birthday` path is an alias for the same
-site's birthday greeting page. On the homepage, click the tulip bouquet to open
-the greeting with a soft page transition. The `/api/health` endpoint can be used
-to confirm the server is up.
+Open <http://localhost:3000>. On the homepage, drag the tulip bouquet to rotate
+it or click it to open the birthday greeting with a soft page transition. The
+`/api/health` endpoint can be used to confirm the server is up.
 
 To restart automatically after server-side changes, run `npm run dev`.
 
 ## Customize
 
-- Change the page title and letter layout in `public/wed2/index.html`.
-- Adjust the interactive bouquet and letter text in `public/wed2/script.js`.
-- Update colors and layout in `public/wed2/style.css`.
+- Change the homepage in `public/wed3/index.html`.
+- Adjust the interactive bouquet and homepage behavior in `public/wed3/script.js`.
+- Update homepage colors and layout in `public/wed3/style.css`.
+- The previous homepage is retained under `public/wed2/`.
 - Replace the images, video, and music under `public/` with your own files.
 
 ## Deploy to Render

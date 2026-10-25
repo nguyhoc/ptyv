@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffd3df" />
+  <title>Bó Hoa Tulip & Những Chú Mèo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/wed3/style.css" />
+</head>
+<body>
+  <!-- Màn hình chờ khi cảnh 3D đang tải -->
+  <div id="loader" role="status" aria-live="polite">
+    <div class="loader-flower" aria-hidden="true">🌷</div>
+    <p>Đang gói hoa…</p>
+  </div>
+
+  <div class="glow" aria-hidden="true"></div>
+  <div id="dots" aria-hidden="true"></div>
+  <div id="scene"></div>
+
+  <div id="cats"></div>
+  <div class="page-transition" aria-hidden="true"></div>
+
+  <button class="music" id="music" type="button" aria-pressed="false" aria-label="Bật nhạc">
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="music-label">Bật nhạc</span>
+  </button>
+
+  <script>
+    // Phòng khi mạng chậm hoặc thư viện 3D không tải được: vẫn gỡ màn hình chờ.
+    setTimeout(function () { document.body.classList.add("ready"); }, 10000);
+  </script>
+  <script type="importmap">
+    { "imports": { "three": "/vendor/three/three.module.js" } }
+  </script>
+  <script type="module" src="/wed3/script.js"></script>
+</body>
+</html>
